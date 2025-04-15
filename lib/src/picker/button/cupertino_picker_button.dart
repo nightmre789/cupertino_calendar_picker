@@ -138,7 +138,7 @@ class _CupertinoPickerButtonState<T> extends State<CupertinoPickerButton<T>>
           border: decoration.border,
         ),
         alignment: Alignment.center,
-        height: 34.0,
+        height: 34.0.scale(context),
         padding: EdgeInsets.only(
           left: 12.0,
           right: widget.icon == null ? 12.0 : 0.0,
