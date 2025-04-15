@@ -139,10 +139,11 @@ class _CupertinoPickerButtonState<T> extends State<CupertinoPickerButton<T>>
         ),
         alignment: Alignment.center,
         height: 34.0.scale(context),
-        padding: EdgeInsets.only(
-          left: 12.0,
-          right: widget.icon == null ? 12.0 : 0.0,
-        ),
+        padding: decoration.padding ??
+            EdgeInsets.only(
+              left: 12.0,
+              right: widget.icon == null ? 12.0 : 0.0,
+            ),
         child: Row(
           children: <Widget>[
             FadeTransition(

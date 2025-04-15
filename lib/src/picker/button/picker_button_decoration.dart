@@ -23,11 +23,13 @@ class PickerButtonDecoration {
     TextStyle? textStyle,
     Color? backgroundColor,
     Border? border,
+    EdgeInsets? padding,
   }) {
     return PickerButtonDecoration._(
       textStyle: textStyle ?? pickerButtonTextStyle,
       backgroundColor: backgroundColor ?? pickerButtonBackgroundColor,
       border: border ?? pickerButtonBorder,
+      padding: padding,
     );
   }
 
@@ -35,6 +37,7 @@ class PickerButtonDecoration {
     this.textStyle,
     this.backgroundColor,
     this.border,
+    this.padding,
   });
 
   /// Creates a cupertino picker button decoration class with default values
@@ -46,6 +49,7 @@ class PickerButtonDecoration {
     TextStyle? textStyle,
     CupertinoDynamicColor? backgroundColor,
     Border? border,
+    EdgeInsets? padding,
   }) {
     final TextStyle style = textStyle ?? pickerButtonTextStyle;
     return PickerButtonDecoration(
@@ -60,6 +64,7 @@ class PickerButtonDecoration {
         context,
       ),
       border: border,
+      padding: padding,
     );
   }
 
@@ -72,16 +77,21 @@ class PickerButtonDecoration {
   /// The [Border] of the picker button.
   final Border? border;
 
+  /// The [Padding] of the picker button.
+  final EdgeInsets? padding;
+
   /// Creates a copy of the class with the provided parameters.
   PickerButtonDecoration copyWith({
     TextStyle? textStyle,
     Color? backgroundColor,
     Border? border,
+    EdgeInsets? padding,
   }) {
     return PickerButtonDecoration(
       textStyle: textStyle ?? this.textStyle,
       backgroundColor: backgroundColor ?? this.backgroundColor,
       border: border ?? this.border,
+      padding: padding ?? this.padding,
     );
   }
 }
